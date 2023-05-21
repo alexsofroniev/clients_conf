@@ -17,3 +17,14 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Administrator {
+  createdAt DateTime @default(now())
+  email     String?
+  id        String   @id @default(cuid())
+  name      String?
+  nikname   String?
+  password  String?
+  role      String?
+  updatedAt DateTime @updatedAt
+}
